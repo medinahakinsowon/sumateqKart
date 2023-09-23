@@ -27,8 +27,8 @@
     <aside class="col-lg-5">
   <div class="card">
     <div class="card-body">
-      <h4 class="card-title mb-4 text-center">Billing System</h4>
-      <form action="" method="POST">
+      <h4 class="card-title mb-4 text-center">Billing Address</h4>
+      <form action="{% url 'place_order' %}" method="POST">
         {% csrf_token %}
         <div class="form-row">
           <div class="col form-group">
