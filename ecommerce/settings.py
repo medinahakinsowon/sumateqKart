@@ -153,3 +153,7 @@ EMAIL_USE_TLS = True
 
 
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
+
+
+PAYPAL_CLIENT_ID = ""
+PAYPAL_SECRET_ID = ""
