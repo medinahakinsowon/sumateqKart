@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     'store',
     'carts',
     'orders',
+    'paypal.standard.ipn',
+    
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -52,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     'django.middleware.csrf.CsrfViewMiddleware',
 ]
 
 ROOT_URLCONF = 'ecommerce.urls'
@@ -155,5 +160,19 @@ EMAIL_USE_TLS = True
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
 
-PAYPAL_CLIENT_ID = ""
-PAYPAL_SECRET_ID = ""
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+
+#paypal settings 
+
+PAYPAL_RECEIVER_EMAIL = 'sumateqbusiness@gmail.com'
+PAYPAL_TEST = True
+
+
+PAYPAL_CLIENT_ID = 'ASjCo9hFi596ta9TRpQkkLrBcYzAa_dBz90mAZyIZzM88VqEf3tVkoUtpy2q8Zq4HbFSVvO1UOfoaJPR'
+PAYPAL_SECRET = 'EJrT0XT1Wk5JGQTfDhcpDs91x2zx_F8aEQm-yUG68e4FFOLUgVpmmiP_C47xJ-lbi1wYm-J4LKyrgK81'
+
+
+
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
